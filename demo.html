@@ -27,19 +27,63 @@
             //$('.peppable').pep({  constrainTo: 'parent' });
             $('.peppable2').pep({
                 constrainTo: 'window',
-                start: function (ev, obj) {
+                stop: function (ev, obj) {
                     console.log(ev);
+                    var d = document.getElementById('plants').innerHTML;
+                    if(d == "NaN")
+                    {
+                        d = "1";
+                    }
+                    else
+                    {
+                        d++;
+                    }
+                    document.getElementById('plants').innerHTML = d;
+
                 }
             });
             $('.peppable3').pep({
                 constrainTo: 'window',
-                start: function (ev, obj) {
+                stop: function (ev, obj) {
                     console.log(ev);
+                    sensor();
+
                 }
             });
             //$('.peppable3').pep({ constrainTo: 'window' });
             //$('.peppable4').pep({ constrainTo: 'parent' });
         });
+        function getRandomInt (min, max) {
+    return Math.floor(Math.random() * (max - min + 1)) + min;
+}
+        function sensor()
+        {
+            var temp = document.getElementById('fuckyou77').innerHTML;
+            var num= getRandomInt(1, 100);
+            console.log("sss");
+            document.getElementById('fuckyou77').innerHTML = "77." + num + "&deg; F";
+            var hum = getRandomInt(1, 5) + 80;
+
+            document.getElementById('fuckyou2').innerHTML = hum + "%";
+            var wind = getRandomInt(0, 2);
+            document.getElementById('77fuckyou79').innerHTML = wind + ' mph';
+            //setTimeout(10000, sensor);
+            var soil = getRandomInt(99, 100);
+            document.getElementById('fuckyou').innerHTML = soil + ' cbar';
+
+            var rain = 0;
+
+            document.getElementById('rainFUCKYOU').innerHTML = rain  + '%';
+
+            document.getElementById('8fuckU').innerHTML = 'Davis, CA';
+
+            setTimeout(sensor, 5000);
+        }
+        function fu()
+        {
+            sensor();
+
+        }
     </script>
 
     <style type="text/css">
@@ -137,8 +181,13 @@
         <div class="col-md-3" style="border: 5px solid #666; margin-top: 30px; height:200px; width:300px;"></div>
         <div class="col-md-3" style="border: 5px solid #666; margin-top: 30px; height:270px; width:300px; ">
           <h3>Real Time Statistics</h3><br>
-          Temperature: <span id="temp">NaN</span><br>
-          
+          Temperature: <span id="fuckyou77">NaN</span><br>
+          Soil Moisture Level: <span id="fuckyou">NaN</span><br>
+          Humidity: <span id="fuckyou2">NaN</span><br>
+          Wind: <span id="77fuckyou79">NaN</span><br>
+          Rain: <span id="rainFUCKYOU">NaN</span><br>   
+          City: <span id="8fuckU">NaN</span><br>
+          Plants: <span id="plants">NaN</span><br>      
 
         </div>
     </div>
@@ -294,7 +343,7 @@
     <!-- Bootstrap core JavaScript
     ================================================== -->
     <!-- Placed at the end of the document so the pages load faster -->
- 
+    
     <script src="js/bootstrap.min.js"></script>
   </body>
 </html>
