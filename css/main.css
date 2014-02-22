@@ -5,17 +5,20 @@
 }
 
 .newnavbar {
-	background-color: #EBDDE2;
+	background-color: #EDC9AF;
 }
 
 
 .newbut {
-	background-color: #EBDDE2;
+	background-color: #EDC9AF;
 	color: #FFFFFF ;
 }
-
+.newer{
+	background-color: #FFFFFF;
+}
 
 p {
 font-family: 'Raleway:50';
 font-size: 12px;
 }
+
