@@ -1,8 +1,6 @@
 .customjumbo {
 
-	
 	background-image: url('../img/floeme.png'); 
-	
 
 }
 
@@ -29,6 +27,5 @@ font-size: 12px;
         max-width: 992px;
         margin-right: 50px;
         margin-left: 50px;
-        background-image: url('../img/floeme.png');
     
 }

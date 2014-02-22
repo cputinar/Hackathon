@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>jquery.pep demo - constrained objects</title>
+
+    <!-- Load local jQuery.  -->
+    <script src="libs/jquery/jquery.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/modernizr/2.6.2/modernizr.min.js"></script>
+
+    <!-- Load local lib and tests. -->
+    <script src="src/jquery.pep.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function () {
+            //$('.peppable').pep({  constrainTo: 'parent' });
+            $('.peppable2').pep({
+                constrainTo: 'window',
+                start: function (ev, obj) {
+                    console.log(ev);
+                }
+            });
+            $('.peppable3').pep({
+                constrainTo: 'window',
+                start: function (ev, obj) {
+                    console.log(ev);
+                }
+            });
+            //$('.peppable3').pep({ constrainTo: 'window' });
+            //$('.peppable4').pep({ constrainTo: 'parent' });
+        });
+    </script>
+    <link rel="stylesheet" href="css/bootstrap.css" />
+    <style type="text/css">
+        body {
+            padding: 0;
+            margin: 0;
+        }
+        #parent {
+            border: 5px solid #666;
+            width: 800px;
+            height: 500px;
+            margin: 30px;
+        }
+        .pep {
+            width: 48px;
+            height: 48px;
+        }
+        .peppable {
+            margin: 10px;
+        }
+        .peppable2 {
+            position: absolute;
+            top: 40px;
+            left: 900px;
+            background: url('plant1.png');
+        }
+        .peppable3 {
+            position: absolute;
+            top: 100px;
+            left: 900px;
+            background: url('sensor.png');
+        }
+    </style>
+
+
+</head>
+
+
+<body>
+    <div class="row">
+        <div class="col-md-8">
+            <div id="parent" style="background:url('canvas.jpg');">
+            </div>
+
+        </div>
+        <div class="col-md-3" style="border: 5px solid #666; margin-top: 30px; height:200px; width:300px;"></div>
+        <div class="col-md-3" style="border: 5px solid #666; margin-top: 30px; height:270px; width:300px; ">
+          <h3>Real Time Statistics</h3><br>
+          Temperature: <span id="temp">NaN</span><br>
+          
+
+        </div>
+    </div>
+
+
+            <div class="pep peppable2"></div>
+            <div class="pep peppable2"></div>
+            <div class="pep peppable2"></div>
+            <div class="pep peppable2"></div>
+            <div class="pep peppable2"></div>
+            <div class="pep peppable2"></div>
+            <div class="pep peppable2"></div>
+            <div class="pep peppable2"></div>
+            <div class="pep peppable2"></div>
+            <div class="pep peppable2"></div>
+            <div class="pep peppable2"></div>
+            <div class="pep peppable2"></div>
+            <div class="pep peppable2"></div>
+            <div class="pep peppable2"></div>
+            <div class="pep peppable2"></div>
+            <div class="pep peppable2"></div>
+            <div class="pep peppable2"></div>
+            <div class="pep peppable2"></div>
+            <div class="pep peppable2"></div>
+            <div class="pep peppable2"></div>
+            <div class="pep peppable2"></div>
+            <div class="pep peppable2"></div>
+            <div class="pep peppable2"></div>
+            <div class="pep peppable2"></div>
+            <div class="pep peppable2"></div>
+            <div class="pep peppable2"></div>
+            <div class="pep peppable2"></div>
+            <div class="pep peppable2"></div>
+            <div class="pep peppable2"></div>
+            <div class="pep peppable2"></div>
+            <div class="pep peppable2"></div>
+            <div class="pep peppable2"></div>
+            <div class="pep peppable2"></div>
+            <div class="pep peppable2"></div>
+            <div class="pep peppable2"></div>
+            <div class="pep peppable2"></div>
+            <div class="pep peppable2"></div>
+            <div class="pep peppable2"></div>
+            <div class="pep peppable2"></div>
+            <div class="pep peppable2"></div>
+            <div class="pep peppable2"></div>
+            <div class="pep peppable2"></div>
+            <div class="pep peppable2"></div>
+            <div class="pep peppable2"></div>
+            <div class="pep peppable2"></div>
+            <div class="pep peppable2"></div>
+            <div class="pep peppable2"></div>
+            <div class="pep peppable2"></div>
+            <div class="pep peppable2"></div>
+            <div class="pep peppable2"></div>
+            <div class="pep peppable2"></div>
+            <div class="pep peppable2"></div>
+            <div class="pep peppable2"></div>
+            <div class="pep peppable2"></div>
+            <div class="pep peppable2"></div>
+            <div class="pep peppable2"></div>
+            <div class="pep peppable2"></div>
+            <div class="pep peppable2"></div>
+            <div class="pep peppable2"></div>
+            <div class="pep peppable2"></div>
+            <div class="pep peppable2"></div>
+            <div class="pep peppable2"></div>
+            <div class="pep peppable2"></div>
+            <div class="pep peppable2"></div>
+            <div class="pep peppable2"></div>
+            <div class="pep peppable2"></div>
+            <div class="pep peppable2"></div>
+            <div class="pep peppable2"></div>
+            <div class="pep peppable2"></div>
+            <div class="pep peppable2"></div>
+            <div class="pep peppable2"></div>
+            <div class="pep peppable2"></div>
+            <div class="pep peppable2"></div>
+            <div class="pep peppable2"></div>
+            <div class="pep peppable2"></div>
+            <div class="pep peppable2"></div>
+            <div class="pep peppable2"></div>
+            <div class="pep peppable2"></div>
+            <div class="pep peppable2"></div>
+            <div class="pep peppable2"></div>
+            <div class="pep peppable2"></div>
+            <div class="pep peppable2"></div>
+            <div class="pep peppable2"></div>
+            <div class="pep peppable2"></div>
+            <div class="pep peppable2"></div>
+            <div class="pep peppable2"></div>
+            <div class="pep peppable2"></div>
+            <div class="pep peppable2"></div>
+            <div class="pep peppable2"></div>
+            <div class="pep peppable2"></div>
+            <div class="pep peppable2"></div>
+            <div class="pep peppable2"></div>
+            <div class="pep peppable2"></div>
+            <div class="pep peppable2"></div>
+            <div class="pep peppable2"></div>
+            <div class="pep peppable2"></div>
+            <div class="pep peppable2"></div>
+            <div class="pep peppable2"></div>
+            <div class="pep peppable2"></div>
+            <div class="pep peppable2"></div>
+            <div class="pep peppable2"></div>
+            <div class="pep peppable2"></div>
+            <div class="pep peppable2"></div>
+            <div class="pep peppable2"></div>
+            <div class="pep peppable3"></div>
+            <div class="pep peppable3"></div>
+
+            <div class="pep peppable3"></div>
+            <div class="pep peppable3"></div>
+            <div class="pep peppable3"></div>
+            <div class="pep peppable3"></div>
+            <div class="pep peppable3"></div>
+            <div class="pep peppable3"></div>
+            <div class="pep peppable3"></div>
+            <div class="pep peppable3"></div>
+            <div class="pep peppable3"></div>
+            <div class="pep peppable3"></div>
+            <div class="pep peppable3"></div>
+            <div class="pep peppable3"></div>
+            <div class="pep peppable3"></div>
+            <div class="pep peppable3"></div>
+            <div class="pep peppable3"></div>
+            <div class="pep peppable3"></div>
+            <div class="pep peppable3"></div>
+            <div class="pep peppable3"></div>
+            <div class="pep peppable3"></div>
+            <div class="pep peppable3"></div>
+
+</body>
+
+
+</html>
