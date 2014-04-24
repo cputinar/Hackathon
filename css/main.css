@@ -1,0 +1,31 @@
+.customjumbo {
+
+	background-image: url('../img/floeme.png'); 
+
+}
+
+.newnavbar {
+	background-color: #C3BBB8;
+}
+
+
+.newbut {
+	background-color: #C3BBB8;
+	color: #FFFFFF ;
+}
+.newer{
+	background-color: #FFFFFF;
+}
+
+p {
+font-family: 'Raleway:50';
+font-size: 12px;
+}
+
+.newcontainer {
+		min-width: 781px;
+        max-width: 992px;
+        margin-right: 50px;
+        margin-left: 50px;
+    
+}
