@@ -21,7 +21,7 @@ def register(request):
 		login(request, user)
 	else:
 		login(request, user)
-	return HttpResponseRedirect(reverse('phLow.views.index', args=())
+	return HttpResponseRedirect(reverse('phLow.views.index', args=()))
 
 def auth_login(request):
 	email = request.POST['inputEmail']
@@ -35,7 +35,7 @@ def auth_login(request):
 		return HttpResponseRedirect('/somethingforthislater/')
 	else:
 		return HttpResponseRedirect('/somethingforthiswithsignup/')
-	return HttpResponseRedirect(reverse('phLow.views.test', args=())
+	return HttpResponseRedirect(reverse('phLow.views.test', args=()))
 
 def admin_login(request):
 	if (request.POST['inputUser'] == "admin" and request.POST['inputPass'] == 'ecs199'):
@@ -53,4 +53,25 @@ def user_view(request):
 		'current_user': request.user,
 		'garden': user_garden,
 		}, context_instance=RequestContext(request))
+
+def Register(request):
+	template_name='GuardN/product.html'
+	context = []
+	if request.method == 'POST':
+		print request.GET
+		form = ProjectForm(request.POST)
+		context['form'] = form
+		print request.POST
+		print form.is_valid()
+		print form.errors
+		if form.is_valid():
+			serial_number= form.cleaned_data.get('serial_number')
+			email = form.cleaned_data.get('email')
+			password = form.cleaned_data.get('password')
+		print serial_number, email
+		client = Client(serial_number, email, password)
+		client.save()
+	else:
+		context['form'] = ProjectForm()
+	return render(request, template_name, context)
 
