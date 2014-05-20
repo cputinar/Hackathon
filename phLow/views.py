@@ -75,3 +75,9 @@ def Register(request):
 		context['form'] = ProjectForm()
 	return render(request, template_name, context)
 
+def detail(request, sens_id):
+	info = Sensors.objects.get(sensorid = sens_id)
+	return HttpResponse("You're looking at sensor %s." % info.time_data_collected)
+
+	
+
