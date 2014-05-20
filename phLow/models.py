@@ -4,8 +4,7 @@ from django import forms
 from datetime import datetime
 # Create your models here.
 
-
-class Person(models.Model)
+class Person(models.Model):
 	name = models.CharField(max_length=200)
 	user = models.ForeignKey(User)
 	households = models.CharField(max_length=10)
@@ -21,7 +20,7 @@ class Location(models.Model):
 	climate = models.CharField(max_length=200)
 	season = models.CharField(max_length=200)
 	moisture = models.CharField(max_length=200)
-	direction = models.Charfield(max_length=200)
+	direction = models.CharField(max_length=200)
 	other = models.CharField(max_length=2000)
 
 	def __unicode__(self):
@@ -36,3 +35,17 @@ class Sensors(models.Model):
     time_data_collected = models.TextField()
     amount_rained = models.DecimalField(max_digits=5, decimal_places=2)
     length_of_increased_moisture = models.DecimalField(max_digits=5, decimal_places=2)
+
+class Plant(models.Model):
+    plant_name = models.CharField(max_length=200)
+    plant_type = models.CharField(max_length=200)
+    plant_soil_type = models.CharField(max_length=200)
+    location = models.IntegerField()
+    def __str__(self):
+        return self.plant_name
+		
+class LocationChoice(models.Model):
+    plant = models.ForeignKey(Plant)
+    location_choice_text = models.CharField(max_length=200)
+    def __str__(self):
+        return self.location_choice_text
