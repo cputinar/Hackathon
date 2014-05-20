@@ -27,4 +27,12 @@ class Location(models.Model):
 	def __unicode__(self):
 		return self.other
 
-
+class Sensors(models.Model):
+    
+    sensorid = models.AutoField(primary_key=True, unique=True, db_index=True)
+    headunitid = models.IntegerField()
+    closest_valve = models.IntegerField()
+    sensor_type = models.IntegerField()
+    time_data_collected = models.TextField()
+    amount_rained = models.DecimalField(max_digits=5, decimal_places=2)
+    length_of_increased_moisture = models.DecimalField(max_digits=5, decimal_places=2)
