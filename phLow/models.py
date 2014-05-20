@@ -26,16 +26,18 @@ class Location(models.Model):
 	def __unicode__(self):
 		return self.other
 
-class Sensors(models.Model):
-    
-    sensorid = models.AutoField(primary_key=True, unique=True, db_index=True)
-    headunitid = models.IntegerField()
+# Need a Sensor Type and Devices & Devices Types model        
+class Sensor(models.Model):
+    sensor_id = models.AutoField(primary_key=True, unique=True, db_index=True)
+    head_unit_id = models.IntegerField()
     closest_valve = models.IntegerField()
     sensor_type = models.IntegerField()
     time_data_collected = models.TextField()
     amount_rained = models.DecimalField(max_digits=5, decimal_places=2)
     length_of_increased_moisture = models.DecimalField(max_digits=5, decimal_places=2)
-
+    def __str__(self):
+        return self.sensor_id
+    
 class Plant(models.Model):
     plant_name = models.CharField(max_length=200)
     plant_type = models.CharField(max_length=200)
@@ -44,6 +46,7 @@ class Plant(models.Model):
     def __str__(self):
         return self.plant_name
 		
+#Used for Plant db and table
 class LocationChoice(models.Model):
     plant = models.ForeignKey(Plant)
     location_choice_text = models.CharField(max_length=200)
