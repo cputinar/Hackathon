@@ -35,8 +35,6 @@ class Sensor(models.Model):
     time_data_collected = models.TextField()
     amount_rained = models.DecimalField(max_digits=5, decimal_places=2)
     length_of_increased_moisture = models.DecimalField(max_digits=5, decimal_places=2)
-    def __str__(self):
-        return self.sensor_id
     
 class Plant(models.Model):
     plant_name = models.CharField(max_length=200)
