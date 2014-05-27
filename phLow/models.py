@@ -38,6 +38,12 @@ class Sensor(models.Model):
     def __str__(self):
         return str(self.sensor_id)
     
+class Zone(models.Model):
+    zone_name = models.CharField(max_length=200)
+    def __str__(self):
+        return self.zone_name
+        
+
 class Plant(models.Model):
     plant_name = models.CharField(max_length=200)
     plant_type = models.CharField(max_length=200)
@@ -52,3 +58,22 @@ class LocationChoice(models.Model):
     location_choice_text = models.CharField(max_length=200)
     def __str__(self):
         return self.location_choice_text
+
+class DeviceType(models.Model):
+    device_name = models.CharField(max_length=200)
+    device_display_name = models.CharField(max_length=200)
+    def __str__(self):
+        return self.device_name
+
+class Device(models.Model):
+    zone = models.ForeignKey(Zone)
+    device_type = models.ForeignKey(DeviceType)
+    device_serial_number = models.CharField(max_length=200)
+    zones_affected = models.CharField(max_length=200)
+    device_display_name = models.CharField(max_length=200)
+    device_location = models.IntegerField()
+    registered = models.BooleanField()
+    #head unit id
+    #customer id
+    def __str__(self):
+        return self.device_name
