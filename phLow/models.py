@@ -5,7 +5,6 @@ from datetime import datetime
 # Create your models here.
 
 class Person(models.Model):
-	name = models.CharField(max_length=200)
 	user = models.ForeignKey(User)
 	households = models.CharField(max_length=10)
 	acreage = models.CharField(max_length=20)
